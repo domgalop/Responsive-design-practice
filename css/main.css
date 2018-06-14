@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.25em;
+    /*   font 16px /line-height 1.2em or 18px line-heigth 1.25em*/
+}
+
+/*
+*
+* Common
+* 
+*/
+
+/*
+
+
+<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px;" href="https://unsplash.com/@ettocl?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Léonard Cotte"><span style="display:inline-block;padding:2px 3px;"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white;" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z"></path></svg></span><span style="display:inline-block;padding:2px 3px;">Léonard Cotte</span></a>
+
+*/
+
+img {
+    height: 100%;
+    width: 100%;
+}
+.container {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 100%;
+}
+
+.nav-container {
+    background-color: #373c3f;
+    width: 100%;
+    line-height: 4.375em;
+}
+
+li {
+    padding-right: 1.2em;
+    list-style-type: none;
+}
+
+.menu {
+    width: 100%;
+    background-color: #373c3f;
+    margin: 0;
+    display: flex;
+}
+
+.menu a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+label {
+    font-weight: bolder;
+    background-color: #202529;
+    text-align: center; 
+    width: 15%;
+    font-size: 1.875em;
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+/*
+*
+* containers
+* 
+*/
+
+.light-blue {
+    background: linear-gradient(150deg, #19b4c6 20%, #0ca4b9 30%,#078aa4 80%);
+    width: 100%;
+}
+
+.light-blue div {
+    margin: 0 auto;
+}
+
+.darker-blue {
+    padding: 1em 0;
+    text-align: center;
+    background-color: #27212c;
+    width: 75%;
+}
+
+.pink {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #bc3183;
+    width: 25%;
+}
+
+.blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    background-color: #5b0fa1;
+    padding: 1.4em ;
+}
+
+.bridge {
+    background-color: #5f313a;
+}
+
+.image {
+    background-color: #d2c4b8;
+}
+
+
+.text {
+    padding: 1em;
+    justify-content: center;
+    background-color: #ebebeb;
+    color: black;
+    width: 100%
+}
+
+/*
+*
+* Media Queries
+* 
+*/
+
+@media screen and (min-width: 20em) and (max-width: 40em){
+    h1 {
+        font-size: 2em;
+        line-height: 1.25em;
+    }
+
+    h2{
+        font-size: 1.625em;
+        line-height: 1.15384615em;
+    }
+
+    label {
+        display: block;
+        cursor: pointer;
+    }
+
+    li {
+        padding: 0;
+        background-color:#202529;
+    }
+    .menu {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        display: none;
+        width: 100%;
+    }
+
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+    .menu li a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+    }
+
+    .header-nav {
+        font-size: 1.2em;
+        padding-left: 4%;
+        width: 85%;
+    }
+
+    .blue {
+        padding: 1.4em 0;
+    }
+
+    .light-blue {
+        padding: 3em 0;
+    }
+
+    .light-blue div{
+        margin-left: 1em;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 40.0625em){
+    h1 {
+        font-size: 2.5em;
+        line-height: 1.125em;
+    }
+
+    h2{
+        font-size: 2em;
+        line-height: 1.25em;
+    }
+
+    p{
+        max-width: 36em;
+    }
+
+    .container-2{
+        width: 33.33%;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .blue {
+        padding: 1.4em ;
+    }
+
+    .light-blue {
+        padding: 6em;
+    }
+}
+
+
+@media screen and (min-width: 61.3125em){
+    h1 {
+        font-size: 3em;
+        line-height: 1.05em;
+    }
+
+    h2{
+        font-size: 2.25em;
+        line-height: 1.25em;
+    }
+
+    p {
+        max-width: 38em;
+    }
+
+    .container-3 {
+        padding: 4%;
+        width: 50%;
+    }
+
+    .container-3 p:only-child {
+        margin: 6em 0 0 0;
+    }
+
+    .light-blue {
+        padding: 8em;
+    }
+}
+
+
+@media screen and (min-width: 64em){
+    .container {
+        width: 64em;
+        margin: 0 auto;
+    }
+}
